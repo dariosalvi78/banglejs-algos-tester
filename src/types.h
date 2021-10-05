@@ -1,3 +1,6 @@
+#ifndef TYPES_H
+#define TYPES_H
+
 #include <inttypes.h>
 
 // type for the accelerometer samples, this depends on your hardware
@@ -11,3 +14,5 @@ typedef uint32_t time_t;
 // the size of this depends on what is the maximum number of steps you are willing to show and store
 // example: is the step count is reset every 24h and one walks no more than 20k / day (reasonable) -> 16 bits should be enough
 typedef uint16_t steps_t;
+
+#endif
