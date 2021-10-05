@@ -30,7 +30,7 @@ void initStepCounters()
     espruino_stepcount_init();
 }
 
-void processStep(time_t time, accel_t x, accel_t y, accel_t z)
+void processStep(sc_time_t time, accel_t x, accel_t y, accel_t z)
 {
     dummy_process(time, x, y, z);
 

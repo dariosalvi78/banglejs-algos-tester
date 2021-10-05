@@ -14,7 +14,7 @@
 // preferably, time should be in ms, if not, use timeScalingFactor in the preprocessing stage to adjust it to ms
 // example: a year worth of ms needs 35 bits, 32 bits allows you to store about 50 days of ms
 // as time doesn't go back, using unsigned integers makes sense
-// typedef int32_t time_t;
+// typedef int32_t sc_time_t;
 
 // magnitude of acceleration
 // this should be 1 bit bigger than accel_t

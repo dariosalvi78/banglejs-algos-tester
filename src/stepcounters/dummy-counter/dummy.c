@@ -4,7 +4,7 @@ void dummy_init()
 {
 }
 
-void dummy_process(time_t time, accel_t x, accel_t y, accel_t z)
+void dummy_process(sc_time_t time, accel_t x, accel_t y, accel_t z)
 {
 }
 

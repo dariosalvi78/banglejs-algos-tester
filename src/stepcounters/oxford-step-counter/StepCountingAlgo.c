@@ -72,7 +72,7 @@ void initAlgo()
     initPostProcessingStage(&peakBuf, &increaseStepCallback);
 }
 
-void processSample(time_t time, accel_t x, accel_t y, accel_t z)
+void processSample(sc_time_t time, accel_t x, accel_t y, accel_t z)
 {
     preProcessSample(time, x, y, z);
 }

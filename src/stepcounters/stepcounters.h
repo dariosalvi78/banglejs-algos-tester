@@ -11,7 +11,7 @@ void initStepCounters();
 /**
  * Processess acceleration, passing x, y and z to all algorithms
  */
-void processStep(time_t time, accel_t x, accel_t y, accel_t z);
+void processStep(sc_time_t time, accel_t x, accel_t y, accel_t z);
 
 /**
  * Prints the results of the step counting process for all algoritms
