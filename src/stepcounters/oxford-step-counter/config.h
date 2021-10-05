@@ -32,7 +32,7 @@ typedef int32_t accumulator_t;
 // typedef uint16_t steps_t;
 
 // difference between min and max acceleration to detect motion
-#define MOTION_THRESHOLD 500
+#define MOTION_THRESHOLD 1500
 
 // window size of the scoring phase
 #define WINDOW_SIZE 10
