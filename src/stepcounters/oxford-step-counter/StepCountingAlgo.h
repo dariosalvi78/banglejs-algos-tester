@@ -30,7 +30,7 @@ SOFTWARE.
 /**
     Initializes all buffers and everything the algorithm needs
 */
-void initAlgo(void);
+void oxford_initAlgo(void);
 
 /**
     This function takes the raw accelerometry data and computes the entire algorithm
@@ -39,22 +39,22 @@ void initAlgo(void);
     @param y, the y axis
     @param z, the z axis
 */
-void processSample(sc_time_t time, accel_t x, accel_t y, accel_t z);
+void oxford_processSample(sc_time_t time, accel_t x, accel_t y, accel_t z);
 
 /**
     Resets the number of walked steps
 */
-void resetSteps(void);
+void oxford_resetSteps(void);
 
 /**
     Resets the entire algorithm
 */
-void resetAlgo(void);
+void oxford_resetAlgo(void);
 
 /**
     Returns the number of walked steps
     @return steps walked
 */
-steps_t getSteps(void);
+steps_t oxford_getSteps(void);
 
 #endif

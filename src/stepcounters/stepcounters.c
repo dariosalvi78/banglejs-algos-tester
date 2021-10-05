@@ -23,7 +23,7 @@ void initStepCounters()
     // initialise all algorithms
     dummy_init();
 
-    initAlgo();
+    oxford_initAlgo();
 
     // espruino
     espruino_counter = 0;
@@ -34,7 +34,7 @@ void processStep(sc_time_t time, accel_t x, accel_t y, accel_t z)
 {
     dummy_process(time, x, y, z);
 
-    processSample(time, x, y, z);
+    oxford_processSample(time, x, y, z);
 
     espruino_counter += espruino_stepcount_new(x * x + y * y + z * z);
 }
@@ -44,7 +44,7 @@ void printSteps(char *type, char *filename, long int groundTruth)
     long int steps = dummy_getSteps();
     printf("%s, dummy, %s, %ld, %ld\n", type, filename, steps, groundTruth);
 
-    steps = getSteps();
+    steps = oxford_getSteps();
     printf("%s, oxford, %s, %ld, %ld\n", type, filename, steps, groundTruth);
 
     printf("%s, espruino, %s, %ld, %ld\n", type, filename, espruino_counter, groundTruth);
@@ -52,7 +52,8 @@ void printSteps(char *type, char *filename, long int groundTruth)
 
 void resetStepCounters()
 {
-    resetSteps();
-    resetAlgo();
+    oxford_resetSteps();
+    oxford_resetAlgo();
+    dummy_reset();
     espruino_counter = 0;
 }

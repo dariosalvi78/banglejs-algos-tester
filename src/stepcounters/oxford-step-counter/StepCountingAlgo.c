@@ -47,7 +47,7 @@ static void increaseStepCallback(void)
     steps++;
 }
 
-void initAlgo()
+void oxford_initAlgo()
 {
     // init buffers
     ring_buffer_init(&rawBuf);
@@ -72,17 +72,17 @@ void initAlgo()
     initPostProcessingStage(&peakBuf, &increaseStepCallback);
 }
 
-void processSample(sc_time_t time, accel_t x, accel_t y, accel_t z)
+void oxford_processSample(sc_time_t time, accel_t x, accel_t y, accel_t z)
 {
     preProcessSample(time, x, y, z);
 }
 
-void resetSteps(void)
+void oxford_resetSteps(void)
 {
     steps = 0;
 }
 
-void resetAlgo(void)
+void oxford_resetAlgo(void)
 {
     resetPreProcess();
     resetDetection();
@@ -97,7 +97,7 @@ void resetAlgo(void)
     ring_buffer_init(&peakBuf);
 }
 
-steps_t getSteps(void)
+steps_t oxford_getSteps(void)
 {
     return steps;
 }
