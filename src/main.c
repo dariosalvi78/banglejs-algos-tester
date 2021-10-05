@@ -66,6 +66,7 @@ void becnhmarkFolder(char *prefix, char *dirname)
 
                 // print out results
                 printSteps(prefix, entry->d_name, GT);
+                resetStepCounters();
 
                 fclose(pFile);
             }
@@ -76,17 +77,11 @@ void becnhmarkFolder(char *prefix, char *dirname)
 
 int main()
 {
-    printf("Testing step counters\n\n");
-
     initStepCounters();
 
     becnhmarkFolder("steps-controlled", STEPS_CONTROLLED_PATH);
 
-    resetStepCounters();
-
     becnhmarkFolder("steps-uncontrolled", STEPS_UNCONTROLLED_PATH);
-
-    resetStepCounters();
 
     return 0;
 }
