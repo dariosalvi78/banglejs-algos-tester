@@ -33,7 +33,7 @@ You can easily import this table into Excel to do run your statistics for exampl
 
 There are 2 datasets for step counting:
 - controlled: usually short and taken with a reliable reference like manual counting
-- uncotnrolled: usually longer and with a less reliable reference, like another step counter
+- uncontrolled: usually longer and with a less reliable reference, like another step counter
 
 each file name must start with the reference step counter value. For example 125_test.csv means that the reference step value count is 125.
 
@@ -41,7 +41,7 @@ To test new datasets just drop a file with the correct name and format in one of
 
 # Algorithms
 
-There are currently 2 algorithms: dummy, which always returns 100, and oxford-step-count, which is based on [this](https://oxford-step-counter.github.io/).
+There are currently 3 algorithms: `dummy`, which always returns 100, `espruino`, the official algorithm inclued in the Espruino firmware and `oxford-step-count`, which is based on [this](https://oxford-step-counter.github.io/).
 
 To add a new algorithm:
 
